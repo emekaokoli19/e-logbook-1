@@ -1,0 +1,35 @@
+<div class="auth">
+
+    <section class="auth__header">
+        <h2>Sign Up</h2>
+        <p>Enter your credentials to create your account</p>
+    </section>
+
+    <section class="auth__form">
+        <form (register)="registerUser">
+            <label for="fullname">
+                <input id="fullname" class="" type="text" formControlName="fullName"
+                    placeholder="Enter your fullname" />
+            </label>
+
+            <label for="email">
+                <input id="email" class="" type="text" formControlName="email" placeholder="Enter your email" />
+            </label>
+
+            <label for="password">
+                <input id="password" class="" type="text" formControlName="password"
+                    placeholder="Enter your password" />
+            </label>
+
+            <div class="radio-label">
+                <p class="radio-label__text">I agree with elb's <a class="">Terms & Conditions</a></p>
+            </div>
+
+            <button type="" class="">Sign Up</button>
+        </form>
+
+        <!-- <div class="">Got an account?<a routerLink="/login" routerLinkActive #rla="routerLinkActive" class="">Log in -->
+        <!-- {{rla.isActive ? '(opened)' :''}}</a></div> -->
+        <!-- [routerLinkActiveOptions]="{exact: true} -->
+    </section>
+</div>
