@@ -3,7 +3,7 @@
 */
 
 import { Injectable } from '@angular/core';
-import { login, register } from '../interfaces/auth-interface';
+import { login, register, forgotPassword } from '../interfaces/auth-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -19,5 +19,13 @@ export class AuthService {
   
   loginUser({}: login) {
     /* auth action ======= */
+  }
+
+  sendPasswordResetLink({}: forgotPassword) {
+    /* auth action ======= */
+  }
+
+  ngOnit() {
+    /* Do this when the page loads ====== */
   }
 }

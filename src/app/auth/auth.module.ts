@@ -21,12 +21,14 @@ import { FormService } from '../services/form.service';
   providers: [
     // AuthService,
     // FormService,
-    {provide: AuthService, useValue: 'authService'},
-    {provide: FormService, useValue: 'formService'}
+    {provide: AuthService, useValue: AuthService},
+    {provide: FormService, useValue: FormService}
   ],
   exports: [
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent,
   ]
 })
 export class AuthModule { 
