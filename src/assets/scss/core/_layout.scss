@@ -1,0 +1,44 @@
+// Main Layout of the Project's Pages
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.main-wrapper {
+    flex-grow: 1;
+}
+
+.display-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-direction-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-direction-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.grid {
+    display: flex;
+
+    
+}
+
+.media-container {
+    @include respond(phone) {
+        // Display phone size
+    }
+}
+
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+}

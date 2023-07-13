@@ -1,0 +1,67 @@
+@import '../core/variables';
+@import '../core/mixins';
+
+$logo-background-image: '../elb-images/elb-bg-img.png';
+
+.logo {
+    background-color: $purp-5;
+    border: 1px solid $purp-5;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.7rem;
+    width: 100%;
+    margin-bottom: 3rem;
+
+    &-group-1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.2rem;
+        padding: 1.4rem;
+    }
+
+    &-group-2 {
+        display: inline;
+
+        img {
+            overflow: hidden;
+            z-index: -1;
+            max-width: 100%;
+        }
+    }
+}
+
+.logo-image {
+    display: block;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    margin-right: 0.3rem;
+
+    img {
+        max-width: 100%;
+        min-height: 100%;
+    }
+}
+
+.verify-image {
+    background-color: $sunshade-4;
+    border: 1px solid $sunshade-2;
+    padding: 2rem;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+
+    &>* {
+        max-width: 100%;
+        min-height: 100%;
+    }
+
+    > {
+        img {
+            object-fit: contain;
+        }
+    }
+}

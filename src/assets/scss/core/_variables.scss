@@ -1,0 +1,52 @@
+// Colors and Palette
+$primary-color: hsla(292, 79%, 53%, 1);
+$primary-color-faint: hsla(292, 79%, 53%, 1);
+$primary-color-faint-2: hsla(291, 80%, 92%, 1);
+$primary-color-active: hsla(292, 79%, 53%, 1);
+
+$purp-3: hsl(291, 80%, 80%);
+$purp-5: hsl(292, 80%, 96%);
+
+$black: hsla(0, 0%, 12%, 1);
+$black-2: hsl(0, 0%, 26%);
+$black-3: hsl(0, 1%, 46%);
+$black-4: hsl(0, 0%, 65%);
+$black-5: hsl(0, 0%, 80%);
+$black-6: hsl(0, 0%, 91%);
+$white: hsla(0, 0%, 100%, 1);
+
+$sunshade-1: hsl(37, 83%, 55%);
+$sunshade-2: hsl(37, 100%, 73%);
+$sunshade-3: hsl(38, 100%, 85%);
+$sunshade-4: hsl(38, 100%, 90%);
+$sunshade-5: hsl(38, 100%, 95%);
+
+$red: hsl(0, 63%, 47%);
+$red-hover: hsl(0, 45%, 2%);
+$red-deep: hsl(324, 100%, 23%);
+$red-disabled: hsl(355, 79%, 34%);
+
+$general-background: hsl(0, 0%, 96%);
+
+// BreakPoints
+$mobile-breakpoint: '480px';
+$tablet-breakpoint: '768px';
+$desktop-breakpoint: '1024px';
+$tv-breakpoint: '1280px';
+
+// Buttons
+$button-default-radius: 5px;
+$button-height: 48px;
+
+// Fonts
+$general-font: 'Plus Jakarta Sans',
+-apple-system,
+BlinkMacSystemFont sans-serif;
+
+// specific font sizes
+$font-percentage-x-small: 25%;
+$font-percentage-small: 33.4%;
+$font-percentage-medium: 50%;
+$font-percentage-x-medium: 67%;
+$font-percentage-large: 78%;
+$font-percentage-x-large: 100%;

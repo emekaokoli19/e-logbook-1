@@ -1,0 +1,133 @@
+@use '../core/mixins'as mixins;
+
+.action-button {
+    padding: 0 24px;
+    text-decoration: none;
+    height: 48px;
+    background-color: $primary-color;
+    color: $white;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    user-select: none;
+    border-radius: 6px;
+    text-align: center;
+    border: 0;
+    padding: 0 24px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 1rem;
+
+    // on small screen
+    // @include mixins.screenDisplay(small) {
+    //     width: 100%;
+    // }
+
+    &:active {
+        outline: none;
+        // opacity: 0.75;
+        background-color: $primary-color-faint;
+    }
+
+    &:hover {
+        background-color: $primary-color-faint;
+    }
+
+    // The Main color
+    &--primary {
+        background-color: $primary-color;
+        color: $white;
+
+        &:hover {
+            background-color: $primary-color-faint;
+        }
+
+        &:focus {
+            outline: 1px solid $purp-5;
+        }
+
+        &:disabled {
+            opacity: 0.25;
+            background-color: darken($color: $primary-color, $amount: 1);
+        }
+
+        &:visited {
+            background-color: darken($color: $primary-color, $amount: 2);
+            opacity: 0.75;
+        }
+
+        // Outline of the main button
+        &.button--outline {
+            border: 1px solid rgba($color: $primary-color, $alpha: 1.0);
+            color: $primary-color-faint;
+
+            &:active {
+                background: transparent;
+            }
+
+            &:hover {
+                background-color: $primary-color-faint-2;
+            }
+        }
+    }
+
+    // The Other button - Outlined 
+    &--outlined {
+        background-color: $white;
+        color: $primary-color;
+
+        &:hover {
+            background-color: $primary-color;
+            color: $white;
+        }
+
+        &:focus {
+            outline: 1px solid $sunshade-2;
+        }
+
+        &:disabled {
+            background-color: $primary-color-faint;
+        }
+
+        &:visited {
+            background-color: darken($color: $primary-color-faint, $amount: 1);
+            opacity: 0.75;
+        }
+    }
+
+    &--disabled {
+        opacity: 0.25;
+        background-color: darken($color: $primary-color, $amount: 1);
+    }
+
+    &--loading {
+        opacity: 0.75;
+        background-color: darken($color: $primary-color-faint, $amount: 1);
+    }
+}
+
+.link-like-button {
+    font-size: 16px;
+    color: $primary-color;
+    font-weight: 600;
+    line-height: 1.5;
+
+    &:hover {
+        color: $primary-color-faint;
+        opacity: 0.85;
+    }
+
+    &:focus {
+        color: darken($color: $primary-color, $amount: 2);
+    }
+
+    &:disabled {
+        opacity: 0.75;
+    }
+}
+
+
+.button-group {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}

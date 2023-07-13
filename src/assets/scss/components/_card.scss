@@ -1,0 +1,18 @@
+.card {
+    border: 0;
+    padding: 1.2rem;
+
+    &-header {
+        padding: 1.2rem;
+    }
+
+    &-body {
+        padding: 1.2rem;
+
+        &__display {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+}

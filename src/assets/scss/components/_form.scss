@@ -1,0 +1,81 @@
+@import '../core/variables';
+
+.form-input-label {
+    font-weight: 400;
+    color: $black;
+    margin-bottom: 0.5rem;
+}
+
+.form-input {
+    display: block;
+    appearance: none;
+    width: 100%;
+    padding: 1rem 0.8rem;
+    border-radius: 0.48rem;
+    background-color: $white;
+    font-weight: 400;
+    color: $black-2;
+    line-height: 1.5;
+    border: 2px solid $black-4;
+    margin-bottom: 0.5rem;
+
+    &:focus,
+    &:active {
+        border-color: $primary-color-active;
+        outline: $primary-color-active;
+    }
+
+    &::placeholder {
+        color: $black-4;
+    }
+}
+
+// CHECKBOX (custom)
+.form-checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+
+    width: 24px;
+    height: 24px;
+    border: 2px solid $black-3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font: inherit;
+    color: $purp-3;
+    background-color: $white;
+
+    // &::before {
+    //     content: "✓";
+    //     width: 24px;
+    //     height: 24px;
+    // }
+}
+
+.input-display {
+    margin-top: 5px;
+    padding: 1rem;
+
+    .name,
+    .label {
+        margin-top: 5px;
+        margin-bottom: 3px;
+        font-weight: bold;
+    }
+}
+
+.form-checkbox {
+    p {
+        margin: 0;
+    }
+}
+
+.form-error {
+    color: $red;
+    font-size: 16px;
+    padding-left: 0.1rem;
+    padding-right: 1rem;
+}

@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+// core
+@import './core/base';
+@import './core/layout';
+@import './core/mixins';
+@import './core/spacing';
+@import './core/variables';
+
+// components
+@import './components/buttons';
+@import './components/card';
+@import './components/form';
+@import './components/icon';
+
+// utilities
+@import './utils/colors';
+@import './utils/customization';
+@import './utils/text';
+
+// pages
+@import './pages/auth';
+@import './pages/dashboard';
+
+// custom
+// @import '';

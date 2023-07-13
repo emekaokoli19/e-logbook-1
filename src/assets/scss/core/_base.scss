@@ -1,0 +1,43 @@
+@import 'variables';
+@import 'mixins';
+
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    // font-size: 62.5%; // 1rem = 10px; 10px/16px
+    font-size: 68.75%;
+
+    // media queries for each screen behaviours come under here.
+    @include respond(tablet-landscape) {
+        font-size: 56.25%;
+    }
+
+    @include respond(tablet-portrait) {
+        font-size: 54.75%;
+    }
+
+    @include respond(large-desktop) {
+        font-size: 75%;
+    }
+
+    height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: $white;
+    min-height: 100%;
+}
+
+// Only marks the portion where the user has clicked on
+::selection {
+    background-color: $primary-color;
+    color: $white;
+}
