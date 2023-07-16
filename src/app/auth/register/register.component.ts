@@ -6,25 +6,23 @@ import { AuthService } from '../auth.service';
   selector: 'app-register',
   // imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  providers: []
 })
 export class RegisterComponent {
-  // router links
-  routerLinkActive: string = 'active'
-
   authService = inject(AuthService)
   formService = inject(FormService)
-  
+
+  // Getting the Reactive for instance from the form service
   formGroup: any = this.formService.registerForm
 
-  formValues = {
+/*  formValues = {
     fullName: this.formGroup.value.fullName ?? '',
     email: this.formGroup.value.email ?? '',
     password: this.formGroup.value.password ?? '',
   }
-  
+*/
   /* actions come into class ==== */
-  registerUser() {
+  /* registerUser() {
     this.authService.registerUser(this.formValues)
-  }
+  } */
 }

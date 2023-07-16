@@ -1,17 +1,22 @@
-/* Not making use of App Module, but App Component ========= */
+/* Not making use of App Component, but App Module ========= */
 
+import { NgModule } from '@angular/core';
 import { AppModule } from './app/app.module';
-import {platformBrowser} from "@angular/platform-browser"; 
-
-/* The difference between an App Module and App Component is that: 
-  The App Module contains components, directives and pipes
-
-  While the App Component Contains the template and the code for the template
-*/
+import {
+  platformBrowser, 
+  // bootstrapApplication, 
+  // provideProtractorTestingSupport
+} from "@angular/platform-browser"; 
+// import { provideRouter } from '@angular/router';
+// import { AppComponent } from './app/app.component';
+// import { routeConfig } from './app/routes/routes';
 
 platformBrowser().bootstrapModule(AppModule)
   .catch((err: any) => console.error(err));
 
+// @NgModule({
+  // retract and come back
+// })
 
 // bootstrapApplication(AppComponent, 
 //   {

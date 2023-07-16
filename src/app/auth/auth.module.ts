@@ -6,10 +6,12 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import {ResetPasswordComponent } from './reset-password/reset-password.component';
 import { AuthService } from './auth.service';
 import { FormService } from '../services/form.service';
-
+import { AppRouter } from '../app-routing.module';
+import { AuthComponent } from './auth.component';
 
 @NgModule({
   declarations: [
+    AuthComponent,
     RegisterComponent,
     LoginComponent,
     ForgotPasswordComponent,
@@ -17,18 +19,19 @@ import { FormService } from '../services/form.service';
   ],
   imports: [
     CommonModule,
+    AppRouter // enable routing in this component's module
   ],
   providers: [
-    // AuthService,
+    // AuthService, fix how services come into this module
     // FormService,
     {provide: AuthService, useValue: AuthService},
-    {provide: FormService, useValue: FormService}
+    {provide: FormService, useValue: FormService},
   ],
   exports: [
-    LoginComponent,
-    RegisterComponent,
-    ForgotPasswordComponent,
-    ResetPasswordComponent,
+    AuthComponent
+  ],
+  bootstrap: [
+    AuthComponent
   ]
 })
 export class AuthModule { 

@@ -1,12 +1,30 @@
 import { Injectable } from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
+import { showHidePasswordInterface } from '../interfaces/auth-interface';
+import { NgStyle } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FormService {
 
+  //  internal value accessor
+  
   constructor() { }
+  
+  
+  showHidePassword: showHidePasswordInterface = {
+    value: '',
+    isVisible: false,
+  };
+  
+  changeVisibility() {
+    ()=> {
+      !this.showHidePassword.isVisible
+      
+      /* show password */
+    }
+  }
 
   registerForm = new FormGroup({
     fullName: new FormControl(''),
@@ -27,4 +45,8 @@ export class FormService {
     newPassword: new FormControl(''),
     confirmNewPassword: new FormControl('')
   })
+}
+
+export class ShowAndHidePassword {
+  
 }

@@ -6,7 +6,7 @@
     overflow: hidden;
 }
 
-.main-wrapper {
+.wrapper {
     flex-grow: 1;
 }
 
@@ -28,8 +28,7 @@
 
 .grid {
     display: flex;
-
-    
+    // @include
 }
 
 .media-container {
@@ -41,4 +40,18 @@
 .flex-space-between {
     display: flex;
     justify-content: space-between;
+}
+
+.auth__layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.form-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.2rem;
 }

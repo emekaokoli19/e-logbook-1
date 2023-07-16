@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 import { login, register, forgotPassword } from '../interfaces/auth-interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class AuthService {
 

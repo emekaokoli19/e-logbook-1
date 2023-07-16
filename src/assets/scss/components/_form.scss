@@ -1,5 +1,16 @@
 @import '../core/variables';
 
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin: 1.1rem 0;
+
+    &--text {
+        font-size: 1.2rem;
+    }
+}
+
 .form-input-label {
     font-weight: 400;
     color: $black;
@@ -18,9 +29,11 @@
     line-height: 1.5;
     border: 2px solid $black-4;
     margin-bottom: 0.5rem;
+    transition: border .12s ease-in-out;
 
     &:focus,
-    &:active {
+    &:active,
+    &:hover {
         border-color: $primary-color-active;
         outline: $primary-color-active;
     }
@@ -48,16 +61,17 @@
     color: $purp-3;
     background-color: $white;
 
-    // &::before {
-    //     content: "✓";
-    //     width: 24px;
-    //     height: 24px;
-    // }
+    &::before {
+        content: "✓";
+        width: 24px;
+        height: 24px;
+    }
 }
 
 .input-display {
-    margin-top: 5px;
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
 
     .name,
     .label {
@@ -79,3 +93,5 @@
     padding-left: 0.1rem;
     padding-right: 1rem;
 }
+
+.form-button {}

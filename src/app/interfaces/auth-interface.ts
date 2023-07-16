@@ -19,3 +19,8 @@ export interface resetPassword {
     password: string;
     confirmPassword: string;
 }
+
+export interface showHidePasswordInterface {
+    value: string | number | null,
+    isVisible: boolean
+} 

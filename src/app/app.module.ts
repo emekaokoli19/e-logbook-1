@@ -3,16 +3,30 @@ import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 
 import { AuthModule } from './auth/auth.module';
-import { HomeModule } from './home/home.module';
+import { AppRouter } from './app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent, 
+  ],
+
   imports: [
+    BrowserModule,
     CommonModule,
     AuthModule,
+    AppRouter
   ],
-  providers: [],
-  bootstrap: [AppComponent],
+
+  providers: [
+    /* services come in here - fix how they come into this modules */
+  ],
+  
+  bootstrap: [
+    /* fix what gets bootstrapped on App initial and continuous load */
+    AppComponent
+  ], 
+
   exports: [AppComponent]
 })
 export class AppModule { }

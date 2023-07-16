@@ -1,15 +1,15 @@
 @import '../core/variables';
 
-.auth-layout {
+.auth {
     display: flex;
     flex-direction: column;
     // margin: ;
 
-    &-header {
+    &__header {
 
         &--text {
             font-size: 34px;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             font-weight: 600;
         }
 
@@ -18,5 +18,35 @@
             font-size: 16px;
             margin-bottom: 0;
         }
+    }
+
+    &__form {
+        max-width: 100%;
+        display: inherit;
+        flex-direction: inherit;
+        margin-top: 1.2rem;
+
+        &--label {
+            font-size: 1.4rem;
+        }
+
+        &--input {
+            font-size: 1.5rem;
+        }
+    }
+
+    &-text {
+        font-size: 1.4rem;
+        align-self: center;
+    }
+
+    &-link {
+        color: $primary-color;
+        font-weight: bold;
+        font-size: inherit;
+    }
+
+    &-button {
+        margin: 11px 0;
     }
 }
