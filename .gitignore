@@ -2,3 +2,13 @@
 react
 angular
 node_modules
+
+# reserved programs for learning
+reserve 
+
+shared
+
+.angular
+
+# hide test files
+.spec.ts
