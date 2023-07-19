@@ -7,9 +7,7 @@ const routes: Routes = [
         /* this can be imported from the auth routing module*/
         path: 'auth',
         loadChildren: () => import('./views/auth/auth.module').then(module => module.AuthModule),
-        loadComponent: () => RegisterComponent
-        // redirectTo: 'auth',
-        // pathMatch: 'full'
+        outlet: "default"
     },
     {
         path: 'home',
