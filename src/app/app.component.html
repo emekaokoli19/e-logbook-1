@@ -1,10 +1,7 @@
 <main class="app-container">
-    <!-- By default the signup page will be our route onPageLoad-->
-    <!-- <button type="button" routerLink="/auth">Auth</button>
-    <button type="button" routerLink="/home">Home</button> -->
-    <router-outlet>
-        <app-auth></app-auth>
-    </router-outlet>
+    <div class="logo">
+        <img src={{logoSrcSvg}} alt="logo">
+    </div>
 
-    <!-- <router-outlet name="home"></router-outlet> -->
+    <router-outlet></router-outlet>
 </main>

@@ -5,4 +5,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'eLogbook';
+
+  logoSrcSvg = './assets/logo-svg.svg'
+  logoSrcPng = './assets/logo.png'
 }

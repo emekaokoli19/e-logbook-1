@@ -12,3 +12,6 @@ shared
 
 # hide test files
 .spec.ts
+
+# External Auth Directory
+/auth
