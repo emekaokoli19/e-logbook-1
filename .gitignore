@@ -12,3 +12,5 @@ shared
 
 # hide test files
 .spec.ts
+
+auth
