@@ -6,7 +6,8 @@ import { Dashboard } from "./dashboard/dashboard.component";
 const routes: Routes = [
     {
         path: 'dashboard',
-        loadComponent: () => Dashboard
+        loadComponent: () => Dashboard,
+        children: []
     },
 ]
 

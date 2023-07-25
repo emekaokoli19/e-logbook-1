@@ -1,7 +1,13 @@
-<main class="app-container">
+<main class="app-container d-flex align-items-center">
+
     <div class="logo">
-        <img src={{logoSrcSvg}} alt="logo">
+        <img src='.' alt="logo">
     </div>
 
-    <router-outlet></router-outlet>
+    <div class="mr-3 ml-3">
+
+        <!-- routed view per link clicks and navigation -->
+        <router-outlet></router-outlet>
+
+    </div>
 </main>

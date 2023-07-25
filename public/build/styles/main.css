@@ -32,6 +32,7 @@ body {
   box-sizing: border-box;
   background-color: hsl(0, 0%, 100%);
   min-height: 100%;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 ::selection {

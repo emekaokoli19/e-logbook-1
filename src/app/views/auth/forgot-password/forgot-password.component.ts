@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-forgot-password',
@@ -8,7 +7,6 @@ import { AuthService } from '../auth.service';
   templateUrl: './forgot-password.component.html',
   providers: [
     /* services and injectables ====== */
-    AuthService
   ]
 })
 
