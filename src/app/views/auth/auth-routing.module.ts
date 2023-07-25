@@ -7,7 +7,6 @@ import { RegisterComponent } from "./register/register.component";
 import { LoginComponent } from "./login/login.component";
 import { ForgotPasswordComponent } from "./forgot-password/forgot-password.component";
 import { ResetPasswordComponent } from "./reset-password/reset-password.component";
-import { AuthComponent } from "./auth.component";
 
 // Lazy loaded from the App Routing Module
 const authRoutes: Routes = [
