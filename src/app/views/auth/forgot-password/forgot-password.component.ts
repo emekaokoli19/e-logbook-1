@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-forgot-password',
@@ -10,5 +11,8 @@ import { Component } from '@angular/core';
 })
 
 export class ForgotPasswordComponent {
-  // actions come into class
+  /* Forgot Password Form ===== */
+  forgotPasswordForm = new FormGroup({
+    email: new FormControl('')
+  })
 }

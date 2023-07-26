@@ -13,4 +13,9 @@ shared
 # hide test files
 .spec.ts
 
+<<<<<<< HEAD
 auth
+=======
+# External Auth Directory
+/auth
+>>>>>>> code-refactor

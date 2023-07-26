@@ -6,27 +6,32 @@
     </section>
 
     <section class="form-layout">
-        <form class="auth__form">
 
+        <!-- Selectors are used to activate directives in templates or represent components as views in the browser -->
+        <form class="auth__form">
             <div class="input-display">
-                <!-- Email -->
+                <!-- Email  -->
                 <label class="form-input-label auth__form--label" for="email">Email</label>
-                <input id="email" class="form-input auth__form--input" type="text" formControlName="email"
-                    placeholder="Enter your email" />
+                <input id="email" class="form-input auth__form--input" type="text" placeholder="Enter your email" />
             </div>
 
             <div class="input-display">
-                <!-- Password -->
+                <!-- Password  -->
                 <label class="form-input-label auth__form--label" for="password">Password</label>
-                <input id="password" class="form-input auth__form--input" type="text" formControlName="password"
+                <input id="password" class="form-input auth__form--input" type="text"
                     placeholder="Enter your password" />
             </div>
 
-            <a class="auth-link mt-2 mb-2 fs-14">Forgot Password?</a>
+            <!-- <label for="email">Email: </label> -->
+            <!-- <input id="email" type="email" [formControl]="email"> -->
+
+            <a class="auth-link mt-2 mb-2 fs-14" routerLink="auth/forgot-password">Forgot
+                Password?</a>
 
             <input type="submit" class="action-button auth-button" value="Log In">
         </form>
 
-        <div class="auth-text">Don't have an account?<a class="auth-link">Sign Up</a></div>
+        <div class="auth-text">Don't have an account?<a class="auth-link" routerLink="/auth/register">Sign Up</a>
+        </div>
     </section>
 </div>

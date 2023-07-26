@@ -13,19 +13,14 @@ export class AuthService {
   constructor() { }
 
   registerUser({fullName, email, password}:register) {
-    /* auth action ======= */
-    console.log(`New User Signed In with fullname: ${fullName}, and email address: ${email}, password cannot be disclosed ${password.slice(4)}`)
+    /* auth action: navigate the user to the dashboard  ======= */
   }
   
   loginUser({}: login) {
-    /* auth action ======= */
+    /* auth action: check if user exists and navigate the User to the dashboard (use firebase for now) ======= */
   }
 
   sendPasswordResetLink({}: forgotPassword) {
     /* auth action ======= */
-  }
-
-  ngOnit() {
-    /* Do this when the page loads ====== */
   }
 }

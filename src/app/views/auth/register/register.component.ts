@@ -1,6 +1,5 @@
-import { Component, inject } from '@angular/core';
-import { FormService } from 'src/app/services/form.service';
-import { AuthService } from '../auth.service';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -9,21 +8,12 @@ import { AuthService } from '../auth.service';
     /* services and injectables ====== */
   ]
 })
-export class RegisterComponent {
-  // authService = inject(AuthService)
-  // formService = inject(FormService)
+export class RegisterComponent { 
 
-  // Getting the Reactive for instance from the form service
-  // formGroup: any = this.formService.registerForm
-
-/*  formValues = {
-    fullName: this.formGroup.value.fullName ?? '',
-    email: this.formGroup.value.email ?? '',
-    password: this.formGroup.value.password ?? '',
-  }
-*/
-  /* actions come into class ==== */
-  /* registerUser() {
-    this.authService.registerUser(this.formValues)
-  } */
+  /* Register User form ==== */
+  registerForm = new FormGroup({
+    fullName: new FormControl(''),
+    email: new FormControl(''),
+    password: new FormControl('')
+  })
 }

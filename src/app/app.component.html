@@ -1,10 +1,13 @@
-<main class="app-container">
-    <!-- By default the signup page will be our route onPageLoad-->
-    <!-- <button type="button" routerLink="/auth">Auth</button>
-    <button type="button" routerLink="/home">Home</button> -->
-    <router-outlet>
-        <app-auth></app-auth>
-    </router-outlet>
+<main class="app-container d-flex align-items-center">
 
-    <!-- <router-outlet name="home"></router-outlet> -->
+    <div class="logo">
+        <img src='.' alt="logo">
+    </div>
+
+    <div class="mr-3 ml-3">
+
+        <!-- routed view per link clicks and navigation -->
+        <router-outlet></router-outlet>
+
+    </div>
 </main>

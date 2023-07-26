@@ -11,15 +11,14 @@
             <div class="input-display">
                 <!-- Fullname -->
                 <label class="form-input-label auth__form--label" for="fullname">Fullname</label>
-                <input id="fullname" class="form-input auth__form--input" type="text" formControlName="fullName"
+                <input id="fullname" class="form-input auth__form--input" type="text"
                     placeholder="Enter your fullname" />
             </div>
 
             <div class="input-display">
                 <!-- Email -->
                 <label class="form-input-label auth__form--label" for="email">Email</label>
-                <input id="email" class="form-input auth__form--input" type="text" formControlName="email"
-                    placeholder="Enter your email" />
+                <input id="email" class="form-input auth__form--input" type="text" placeholder="Enter your email" />
             </div>
 
             <div class="input-display">
@@ -32,7 +31,7 @@
             <div class="form-group">
                 <div class="form-checkbox">
                 </div>
-                <p class="form-group--text">I agree with elb's <a><b>Terms & Conditions</b></a></p>
+                <p class="form-group--text">I agree with elb's <a routerLink=""><b>Terms & Conditions</b></a></p>
             </div>
 
             <!-- <button (click)="null" type="" class="action-button auth-button">Sign Up</button> -->
@@ -41,7 +40,8 @@
 
         </form>
 
-        <div class="auth-text">Got an account?<a class="auth-link" aria-current="page" routerLink="login">Log in</a>
+        <div class="auth-text">Got an account?<a class="auth-link" aria-current="page" routerLink="/login">Log
+                in</a>
         </div>
 
         <!-- <div class="">Got an account?<a routerLink="/login" routerLinkActive #rla="routerLinkActive" class="">Log in -->

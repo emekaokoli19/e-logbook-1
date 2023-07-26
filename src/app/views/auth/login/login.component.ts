@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+// import { authInitialValues, email, login, password } from 'src/app/interfaces/auth-interface'; 
 
 @Component({
   selector: 'app-login',
@@ -8,5 +10,10 @@ import { Component } from '@angular/core';
   ]
 })
 export class LoginComponent {
-  // actions come into class
+
+  /* Login User Form ===== */
+  loginForm = new FormGroup({
+      email: new FormControl(),
+      password: new FormControl('')
+    })
 }
