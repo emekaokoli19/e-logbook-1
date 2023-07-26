@@ -10,16 +10,6 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class RegisterComponent { 
 
-  reactiveForm!: FormGroup
-
-  ngOnInit() {
-    this.reactiveForm = new FormGroup({
-      fullName: new FormControl(''),
-      email: new FormControl(''),
-      password: new FormControl('')  
-    })
-  }
-
   /* Register User form ==== */
   registerForm = new FormGroup({
     fullName: new FormControl(''),

@@ -8,6 +8,11 @@ import { UpdatePasswordComponent } from './update-password/update-password.compo
 /* Routing with Module and Lazy-Loading ===== */
 const routes: Routes = [
   {
+    path: '', // if the user enters auth in url bar
+    redirectTo: '/login',
+    pathMatch: 'full'
+  },
+  {
     path: '', 
     children: [
       {
@@ -28,11 +33,6 @@ const routes: Routes = [
       },
     ]
   },
-  {
-    path: '', // if the user enters auth in url bar
-    redirectTo: '/login',
-    pathMatch: 'full'
-  }
 ];
 
 @NgModule({

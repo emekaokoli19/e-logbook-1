@@ -7,26 +7,25 @@
 
     <section class="form-layout">
 
-        <form class="auth__form" [formGroup]="reactiveForm">
+        <form class="auth__form">
             <div class="input-display">
                 <!-- Fullname -->
                 <label class="form-input-label auth__form--label" for="fullname">Fullname</label>
-                <input id="fullname" class="form-input auth__form--input" type="text" placeholder="Enter your fullname"
-                    formControlName="fullName" />
+                <input id="fullname" class="form-input auth__form--input" type="text"
+                    placeholder="Enter your fullname" />
             </div>
 
             <div class="input-display">
                 <!-- Email -->
                 <label class="form-input-label auth__form--label" for="email">Email</label>
-                <input id="email" class="form-input auth__form--input" type="text" placeholder="Enter your email"
-                    formControlName="email" />
+                <input id="email" class="form-input auth__form--input" type="text" placeholder="Enter your email" />
             </div>
 
             <div class="input-display">
                 <!-- Password -->
                 <label class="form-input-label auth__form--label" for="password">Password</label>
                 <input id="password" class="form-input auth__form--input" type="text" formControlName="password"
-                    placeholder="Enter your password" formControlName="password" />
+                    placeholder="Enter your password" />
             </div>
 
             <div class="form-group">
