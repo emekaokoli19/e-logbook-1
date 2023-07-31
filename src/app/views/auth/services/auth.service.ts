@@ -1,11 +1,9 @@
   /* Here contains the list of all auth actions
   for our forms across all pages
 */
-
 import { Injectable } from '@angular/core';
 import { login, register, forgotPassword, email} from '../../../interfaces/auth-interface';
 import {Validate} from "../../../shared/helpers/validators";
-// import {Router} from "@angular/router";
 
   @Injectable({
     providedIn: 'root',

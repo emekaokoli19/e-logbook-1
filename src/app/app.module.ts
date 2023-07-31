@@ -3,10 +3,10 @@ import {CommonModule, NgOptimizedImage} from '@angular/common';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRouter } from './app-routing.module';
-import { AuthService } from './views/auth/services/auth.service';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
 
     imports: [

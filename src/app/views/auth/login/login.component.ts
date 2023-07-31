@@ -1,7 +1,6 @@
 import { Component, OnInit, } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Validate } from 'src/app/shared/helpers/validators';
-import {FormService} from "../../../shared/services/form.service";
 
 @Component({
   selector: 'app-login',
@@ -11,12 +10,19 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup
 
   /* To avoid re-typing boilerplate code */
-  constructor(private loginFormBuilder: FormBuilder, private formService: FormService) {}
+  constructor(private loginFormBuilder: FormBuilder) {}
 
-  /* logic for showing and hiding password as a service */
-  inputType = this.formService.inputType
-  eyeIcon = this.formService.eyeIcon
-  iconIsVisibleMethod = this.formService.hideShowPassword
+  /* parameters */
+  inputType: string = 'password'
+  isInputTypeText: boolean = false
+  eyeIcon: string = 'assets/images/svg/show-password.svg'
+
+  /* methods */
+  hideShowPassword(): void {
+    this.isInputTypeText = !this.isInputTypeText
+    this.isInputTypeText ? this.eyeIcon = 'assets/images/svg/show-password.svg' : 'assets/images/svg/hide-password.svg'
+    this.isInputTypeText ? this.inputType = "text" : this.inputType = "password"
+  }
 
   /* Login User Form ===== */
   ngOnInit(): void { /*create form as Component loads */
@@ -29,8 +35,5 @@ export class LoginComponent implements OnInit {
   /* When user clicks login button */
   onLoginUser() {
       console.log(this.loginForm.value)
-
-    /* Validate, if no error authenticate user */
-
   }
 }

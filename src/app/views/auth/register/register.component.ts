@@ -1,9 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { Validate } from "src/app/shared/helpers/validators";
-import {FormService} from "../../../shared/services/form.service";
-// import { AuthService } from "../services/auth.service";
-// import { register } from "src/app/interfaces/auth-interface";
 
 @Component({
     templateUrl: './register.component.html',
@@ -12,7 +9,7 @@ import {FormService} from "../../../shared/services/form.service";
 export class RegisterComponent implements OnInit{
     registerForm!: FormGroup
 
-    constructor(private registerFormBuilder: FormBuilder, private formService: FormService) { }
+    constructor(private registerFormBuilder: FormBuilder) { }
 
     /* create form on initialization */
     ngOnInit(): void {
@@ -23,16 +20,27 @@ export class RegisterComponent implements OnInit{
             isAgree: [this]
         })
     }
+    /* hide and show password */
+    inputType: string = 'password'
+    isInputTypeText: boolean = false
+    eyeIcon: string = 'assets/images/svg/show-password.svg'
 
-    /* logic for showing and hiding password as a service */
-    inputType = this.formService.inputType
-    eyeIcon = this.formService.eyeIcon
-    iconIsVisibleMethod = this.formService.hideShowPassword
+    hideShowPassword(): void {
+      this.isInputTypeText = !this.isInputTypeText
+      this.isInputTypeText ? this.eyeIcon = 'assets/images/svg/show-password.svg' : 'assets/images/svg/hide-password.svg'
+      this.isInputTypeText ? this.inputType = "text" : this.inputType = "password"
+    }
 
-    /* logic for showing tick icon in agreement to T&C in checkbox */
-    tickIcon = this.formService.tickIcon
-    tickIconImageClass = this.formService.tickImageClass
-    toggleAgreement = this.formService.toggleAgreement
+    /* agree/disagree with Terms and Condition */
+    agree: boolean = false
+    tickIcon: string = "assets/images/svg/tick-icon.svg"
+    tickImageClass = "display-hidden"
+
+    toggleAgreement(): void {
+      this.agree = !this.agree
+      this.agree ? this.tickIcon = "assets/images/svg/tick-image.svg" : null
+      this.agree ? this.tickImageClass = "display-hidden" : this.tickImageClass = "display-visible"
+    }
 
     onRegisterUser(): void {
         console.log(this.registerForm.value)

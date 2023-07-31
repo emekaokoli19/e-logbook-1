@@ -23,7 +23,7 @@
 
                 <label class="form-input-label auth__form--label" for="password">Password</label>
 
-                <img [ngSrc]="eyeIcon" alt="eye-icon" class="eye-icon" (click)="iconIsVisibleMethod()" />
+                <img [ngSrc]="eyeIcon" alt="eye-icon" class="eye-icon" (click)="hideShowPassword()" />
 
                 <input id="password" class="form-input auth__form--input eye-icon-parent" type="text"
                     placeholder="Enter your password" formControlName="password" [type]="inputType" />
