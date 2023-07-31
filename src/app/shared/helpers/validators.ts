@@ -24,12 +24,12 @@ export class Validate {
         Validators.maxLength(30),
     ]
 
-    /*
-      passwordMatchValidator(form: FormGroup) {
-         return form.get('password').value === form.get('passwordConfirm').value
-           ? null : {'mismatch': true};
-      }
-     */
+    // passwordMatchValidator(form: FormGroup, passwordField: FormControl, confirmPasswordField: FormControl) {
+    //     // return form.get(passwordField).value === form.get(confirmPasswordField).value
+    //     //     return form.controls
+    //         ? null
+    //         : {'mismatch': true};
+    // }
 
     static validateAllFormInputs(form: FormGroup) {
         Object.keys(form.controls).forEach(control => {
@@ -38,6 +38,11 @@ export class Validate {
             /* Validate each form control */
             if (form instanceof FormControl) {
 
+            }
+            else if (form instanceof FormGroup) {
+                form.markAsDirty({
+                    onlySelf: true
+                })
             }
         })
     }

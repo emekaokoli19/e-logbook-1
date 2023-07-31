@@ -1,5 +1,5 @@
 import { NgModule, Input } from '@angular/core';
-import { CommonModule} from '@angular/common';
+import { CommonModule, NgOptimizedImage} from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthRouter, routingComponents } from './auth-routing.module';
 import {AuthService} from "./services/auth.service";
@@ -12,6 +12,7 @@ import {AuthService} from "./services/auth.service";
   imports: [
     CommonModule,
     AuthRouter,
+    NgOptimizedImage,
     /* Immutable forms module ====== */
 
     ReactiveFormsModule

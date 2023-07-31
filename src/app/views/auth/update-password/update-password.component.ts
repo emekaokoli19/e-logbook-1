@@ -6,6 +6,4 @@ import {FormBuilder} from "@angular/forms";
     providers: []
 })
 
-export class UpdatePasswordComponent {
-
-}
+export class UpdatePasswordComponent {}

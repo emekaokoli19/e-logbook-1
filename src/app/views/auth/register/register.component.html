@@ -30,7 +30,7 @@
                 <label class="form-input-label auth__form--label" for="password">Password</label>
                 <input id="password" class="form-input auth__form--input" [type]="inputType"
                     placeholder="Enter your password" />
-                <img (click)="hideShowPassword()" src="assets/images/svg/show-password.svg" alt="show-password"
+                <img (click)="iconIsVisibleMethod()" ngSrc="assets/images/svg/show-password.svg" alt="show-password"
                     class="eye-icon--third-input" />
             </div>
             <!--error element -->
@@ -40,7 +40,7 @@
 
             <div class="form-group">
                 <div class="form-checkbox" (click)="toggleAgreement()">
-                    <img width="20px" [class]="[tickImageClass]" [src]=[tickIcon]> <!-- no alt text -->
+                    <img width="20px" [class]="[tickIconImageClass]" [src]=[tickIcon]> <!-- no alt text -->
                 </div>
                 <p class="form-group--text">I agree with elb's <a routerLink=""><b>Terms & Conditions</b></a></p>
             </div>
