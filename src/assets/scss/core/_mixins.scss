@@ -81,3 +81,11 @@ $breakpoint-extra-large: 1440px;
 @mixin create-grid($cols: $cols) {
     grid-template-columns: repeat(1fr, $cols);
 }
+
+@mixin positionAbsolutely($top, $right, $left, $bottom) {
+    position: absolute !important;
+    top: $top !important;
+    right: $right !important;
+    left: $left !important;
+    bottom: $bottom !important;
+}

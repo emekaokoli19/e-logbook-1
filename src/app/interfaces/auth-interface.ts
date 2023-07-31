@@ -39,13 +39,8 @@ export interface authInitialValues {
     }
 }
 
-/* For Individual Form Controls - Types set as values*/
-export type fullName = '';
-export type email = '';
-export type password = '';
-export type confirmPassword= '';
-
-export interface showHidePasswordInterface {
-    value: string | number | null,
-    isVisible: boolean
-} 
+/* For Individual Form Controls - Type set as values or datatype */
+export type fullName = string | '';
+export type email = string | '';
+export type password = string | '';
+export type confirmPassword= string | '';

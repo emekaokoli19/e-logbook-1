@@ -8,24 +8,30 @@
     <section class="form-layout">
 
         <!-- Selectors are used to activate directives in templates or represent components as views in the browser -->
-        <form class="auth__form">
+        <form class="auth__form" [formGroup]="loginForm" (submit)="onLoginUser()">
             <div class="input-display">
-                <!-- Email  -->
+
                 <label class="form-input-label auth__form--label" for="email">Email</label>
-                <input id="email" class="form-input auth__form--input" type="text" placeholder="Enter your email" />
+
+                <input id="email" class="form-input auth__form--input" type="text" placeholder="Enter your email"
+                    formControlName="email" />
             </div>
+            <!-- email Validation -->
+            <span *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required', 'email')" class="form-error">Email is required</span>
 
             <div class="input-display">
-                <!-- Password  -->
+
                 <label class="form-input-label auth__form--label" for="password">Password</label>
-                <input id="password" class="form-input auth__form--input" type="text"
-                    placeholder="Enter your password" />
+
+                <img [src]="eyeIcon" alt="eye-icon" class="eye-icon" (click)="hideShowPassword()" />
+
+                <input id="password" class="form-input auth__form--input eye-icon-parent" type="text"
+                    placeholder="Enter your password" formControlName="password" [type]="inputType" />
             </div>
+            <!-- password Validation -->
+            <span *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required', 'password')" class="form-error">Password is required</span>
 
-            <!-- <label for="email">Email: </label> -->
-            <!-- <input id="email" type="email" [formControl]="email"> -->
-
-            <a class="auth-link mt-2 mb-2 fs-14" routerLink="auth/forgot-password">Forgot
+            <a class="auth-link mt-2 mb-2 fs-14" routerLink="/auth/forgot-password">Forgot
                 Password?</a>
 
             <input type="submit" class="action-button auth-button" value="Log In">

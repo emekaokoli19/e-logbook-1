@@ -1,29 +1,28 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule, Input } from '@angular/core';
+import { CommonModule} from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthRouter, routingComponents } from './auth-routing.module';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { UpdatePasswordComponent } from './update-password/update-password.component';
+import {AuthService} from "./services/auth.service";
 
 @NgModule({
   declarations: [
     /* from auth-routing.module.ts ===== */
-    RegisterComponent,
-    LoginComponent,
-    ForgotPasswordComponent, 
-    UpdatePasswordComponent
+    routingComponents,
   ],
   imports: [
     CommonModule,
     AuthRouter,
-
     /* Immutable forms module ====== */
-    
+
     ReactiveFormsModule
-    
+
     /* This module should be imported to the exact module that's using it and not the root module: app.module.ts */
+  ],
+
+  providers: [
+    AuthService,
   ]
 })
-export class AuthModule { }
+export class AuthModule {
+  // @Input() emailImage: string =  'assets/images/svg/email-image.svg'
+}

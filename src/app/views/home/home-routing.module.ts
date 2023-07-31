@@ -6,14 +6,14 @@ import { Dashboard } from "./dashboard/dashboard.component";
 const routes: Routes = [
     {
         path: 'dashboard',
-        loadComponent: () => Dashboard,
+        component: Dashboard,
         children: []
     },
 ]
 
 @NgModule ({
     // imports: [RouterModule],
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forChild(routes)],
     exports: [RouterModule],
     providers: [
         // Router /* The router is already a service */

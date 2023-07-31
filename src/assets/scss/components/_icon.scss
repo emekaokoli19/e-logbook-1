@@ -7,12 +7,7 @@ $logo-background-image: '../elb-images/elb-bg-img.png';
     background-color: $purp-5;
     border: 1px solid $purp-5;
     border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0.7rem;
-    width: 100%;
-    margin-bottom: 3rem;
+    margin: 0.7rem 0.7rem 3rem;
 
     &-group-1 {
         display: flex;
@@ -64,4 +59,41 @@ $logo-background-image: '../elb-images/elb-bg-img.png';
             object-fit: contain;
         }
     }
+}
+
+.eye-icon-parent {
+    position: relative;
+}
+
+.eye-icon,
+.eye-icon--second-view {
+    width: 30px;
+    position: absolute;
+    left: 87%;
+    top: 50%;
+    z-index: 1;
+    cursor: pointer;
+    max-width: 100%;
+
+    &:hover,
+    &:focus,
+    &focus-visible {
+        border-color: $primary-color;
+    }
+
+    /* For Forgot Password page password input positioning */
+    &--first-input {
+        @include positionAbsolutely(45%, none, 87%, none)
+    }
+
+    /* For Sign Up page password input positioning */
+    &--third-input {
+        @include positionAbsolutely(63%, none, 87%, none)
+    }
+}
+
+.tick-image {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
 }

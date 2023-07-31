@@ -1,0 +1,92 @@
+@import '../core/variables';
+.purple {
+  color: $primary-color;
+
+  &--faint {
+    color: $primary-color-faint
+  }
+
+  &--extra-faint {
+    color: $primary-color-faint-2
+  }
+
+  &--active {
+    color: $primary-color-active;
+  }
+
+  &--faded {
+    color: $purp-3
+  }
+
+  &--extra-faded {
+    color: $purp-5;
+  }
+}
+
+.text-black {
+  color: $black;
+
+  &--2 {
+    color: $black-2;
+  }
+
+  &--3 {
+    color: $black-3;
+  }
+
+  &--4 {
+    color: $black-4;
+  }
+
+  &--5 {
+    color: $black-5;
+  }
+
+  &--6 {
+    color: $black-6;
+  }
+}
+
+.white {
+  color: $white;
+}
+
+.sunshade {
+  &--deep {
+    color: $sunshade-1;
+  }
+
+  &--smooth {
+    color: $sunshade-2;
+  }
+
+  &--warm {
+    color: $sunshade-3;
+  }
+
+  &--light {
+    color: $sunshade-4;
+  }
+
+  &--very-bright {
+    color: $sunshade-5;
+  }
+}
+
+.red, .error {
+  &--deep {
+    color: $red;
+  }
+
+  &--very-deep {
+    color: $red-deep;
+  }
+
+  &--disabled {
+    color: $red-disabled;
+  }
+
+  &:hover {
+    color: $red-hover;
+  }
+}

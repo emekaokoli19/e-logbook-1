@@ -2,20 +2,17 @@
 react
 angular
 node_modules
+elb-api.390labs.com
+
+snippet.md
 
 # reserved programs for learning
-reserve 
-
-shared
+reserve
 
 .angular
 
 # hide test files
 .spec.ts
 
-<<<<<<< HEAD
-auth
-=======
 # External Auth Directory
 /auth
->>>>>>> code-refactor

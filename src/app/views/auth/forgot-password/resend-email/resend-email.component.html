@@ -1,0 +1,16 @@
+<div class="auth gap-2 display-flex-center">
+    <div>
+        <img [src]='' class="verify-image mt-2 mb-2" alt="verify-email-image">
+    </div>
+
+    <div class="auth__header mb-3 text-black--3 text-center display-flex-center--column">
+        <h2 class="auth__header-text text-black-2">{{emailStatus}}</h2>
+
+        <p class="auth__header--info-text">Please click the link that has just been sent to <span class="text-black--2 fw-bold">{{'gbemiga@gmail.com'}}</span>
+            reset your password</p>
+    </div>
+
+    <div class="auth-text text-black--3">Didn't get the link?
+        <a (click)="resendPasswordResetLink()" class="auth-link purple--faint">Resend</a>
+    </div>
+</div>

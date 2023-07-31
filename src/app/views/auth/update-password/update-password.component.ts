@@ -1,17 +1,11 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { Component } from "@angular/core";
+import {FormBuilder} from "@angular/forms";
 
 @Component({
-  selector: 'app-update-password',
-  templateUrl: './update-password.component.html',
-  providers: [
-    /* services and injectables ====== */
-  ]
+    templateUrl: './update-password.component.html',
+    providers: []
 })
+
 export class UpdatePasswordComponent {
-  /* Change the user's password ===== */
-  resetPasswordForm = new FormGroup({
-    newPassword: new FormControl(''),
-    confirmNewPassword: new FormControl('')
-  })
+
 }

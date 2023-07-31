@@ -15,4 +15,10 @@ export class ForgotPasswordComponent {
   forgotPasswordForm = new FormGroup({
     email: new FormControl('')
   })
+
+  /* When user clicks submit button */
+  onSubmit(): void {
+    /* send the password reset link with forgot password service to the email typed in*/
+
+  }
 }

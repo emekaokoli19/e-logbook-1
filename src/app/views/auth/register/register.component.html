@@ -7,45 +7,50 @@
 
     <section class="form-layout">
 
-        <form class="auth__form">
+        <form class="auth__form" [formGroup]="registerForm" (submit)="onRegisterUser()">
             <div class="input-display">
-                <!-- Fullname -->
                 <label class="form-input-label auth__form--label" for="fullname">Fullname</label>
                 <input id="fullname" class="form-input auth__form--input" type="text"
                     placeholder="Enter your fullname" />
             </div>
+            <!--error element -->
+            <span
+                *ngIf="registerForm.controls['fullName'].dirty && [this.registerForm.hasError('required', 'fullName')]">Fullname
+                is Required</span>
 
             <div class="input-display">
-                <!-- Email -->
                 <label class="form-input-label auth__form--label" for="email">Email</label>
                 <input id="email" class="form-input auth__form--input" type="text" placeholder="Enter your email" />
             </div>
+            <!--error element -->
+            <span *ngIf="registerForm.controls['email'].dirty && registerForm.hasError('required', 'email')">Email is
+                Required</span>
 
             <div class="input-display">
-                <!-- Password -->
                 <label class="form-input-label auth__form--label" for="password">Password</label>
-                <input id="password" class="form-input auth__form--input" type="text" formControlName="password"
+                <input id="password" class="form-input auth__form--input" [type]="inputType"
                     placeholder="Enter your password" />
+                <img (click)="hideShowPassword()" src="assets/images/svg/show-password.svg" alt="show-password"
+                    class="eye-icon--third-input" />
             </div>
+            <!--error element -->
+            <span
+                *ngIf="registerForm.controls['password'].dirty && registerForm.hasError('required', 'password')">Password
+                is Required</span>
 
             <div class="form-group">
-                <div class="form-checkbox">
+                <div class="form-checkbox" (click)="toggleAgreement()">
+                    <img width="20px" [class]="[tickImageClass]" [src]=[tickIcon]> <!-- no alt text -->
                 </div>
                 <p class="form-group--text">I agree with elb's <a routerLink=""><b>Terms & Conditions</b></a></p>
             </div>
-
-            <!-- <button (click)="null" type="" class="action-button auth-button">Sign Up</button> -->
 
             <input type="submit" class="action-button auth-button" value="Sign Up" />
 
         </form>
 
-        <div class="auth-text">Got an account?<a class="auth-link" aria-current="page" routerLink="/login">Log
+        <div class="auth-text">Got an account?<a class="auth-link" aria-current="page" routerLink="/auth/login">Log
                 in</a>
         </div>
-
-        <!-- <div class="">Got an account?<a routerLink="/login" routerLinkActive #rla="routerLinkActive" class="">Log in -->
-        <!-- {{rla.isActive ? '(opened)' :''}}</a></div> -->
-        <!-- [routerLinkActiveOptions]="{exact: true} -->
     </section>
 </div>

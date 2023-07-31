@@ -89,6 +89,18 @@ a {
     &-black {
         color: $black !important;
     }
+
+    &-center {
+        text-align: center;
+    }
+
+    &-right {
+        text-align: right;
+    }
+
+    &-left {
+        text-align: left;
+    }
 }
 
 .fw-very-light {

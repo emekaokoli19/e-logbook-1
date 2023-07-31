@@ -1,19 +1,35 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
-// import { authInitialValues, email, login, password } from 'src/app/interfaces/auth-interface'; 
+import { Component, OnInit, } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { Validate } from 'src/app/shared/helpers/validators';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  providers: [
-    /* services and injectables ====== */
-  ]
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
+
+
+
+  loginForm!: FormGroup
+
+  /* To avoid re-typing boilerplate code */
+  constructor(private loginFormBuilder: FormBuilder) { }
 
   /* Login User Form ===== */
-  loginForm = new FormGroup({
-      email: new FormControl(),
-      password: new FormControl('')
+  ngOnInit(): void { /*create form as Component loads */
+    this.loginForm = this.loginFormBuilder.group({
+      email: ['', Validate.emailValidator],
+      password: ['', Validate.passwordValidator]
     })
+  }
+
+  /* When user clicks login button */
+  onLoginUser() {
+      console.log(this.loginForm.value)
+
+    /* Validate, if no error authenticate user */
+
+  }
+
+
 }

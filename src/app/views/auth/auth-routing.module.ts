@@ -1,21 +1,13 @@
-<<<<<<< HEAD
-import { NgModule } from "@angular/core";
-import { 
-    Routes, 
-    RouterModule 
-} from '@angular/router';
-import { RegisterComponent } from "./register/register.component";
-import { LoginComponent } from "./login/login.component";
-import { ForgotPasswordComponent } from "./forgot-password/forgot-password.component";
-import { ResetPasswordComponent } from "./reset-password/reset-password.component";
-=======
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResendEmailComponent } from './forgot-password/resend-email/resend-email.component';
+import { RegisterComponent } from './register/register.component';
+import { VerifyEmailComponent } from './register/verify-email/verify-email.component';
 import { UpdatePasswordComponent } from './update-password/update-password.component';
->>>>>>> code-refactor
+import { VerifyEmailSuccess } from './register/verify-email/verify-email-success/verify-email-success.component';
+
 
 /* Routing with Module and Lazy-Loading ===== */
 const routes: Routes = [
@@ -24,28 +16,46 @@ const routes: Routes = [
     redirectTo: '/login',
     pathMatch: 'full'
   },
+  // Auth Process
   {
-    path: '', 
+    path: '',
     children: [
       {
-        path: 'login', 
+        path: 'login',
         component: LoginComponent
       },
       {
-        path: 'register', 
+        path: 'register',
         component: RegisterComponent
       },
       {
-        path: 'forgot-password', 
+        path: 'forgot-password',
         component: ForgotPasswordComponent
       },
       {
-        path: 'update-password', 
+        path: 'update-password',
         component: UpdatePasswordComponent
       },
+
+      // After Auth Process
+      {
+        path: 'verify-email',
+        component: VerifyEmailComponent
+        /* Path for when the user has signs up for verification */
+      },
+      {
+        path: 'resend-email',
+        component: ResendEmailComponent
+        /* Path for after the user clicks the send button on the forgot password page */
+      },
+      {
+        path: 'verify-success',
+        component: VerifyEmailSuccess
+        /* Path for after user's verification has been confirmed */
+      }
     ]
-  },
-];
+  }
+]
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
@@ -54,8 +64,14 @@ const routes: Routes = [
 export class AuthRouter { }
 
 export const routingComponents = [
+  // for the process pages
   RegisterComponent,
   LoginComponent,
   ForgotPasswordComponent,
   UpdatePasswordComponent,
+
+  // for the result pages
+  VerifyEmailComponent,
+  VerifyEmailSuccess,
+  ResendEmailComponent,
 ]
